@@ -8,21 +8,14 @@ namespace Valve.VR.InteractionSystem.Sample
     {
         public bool isAutomatic = true;
 
-
-
         public bool usingChargingHandle = false;
-        //public GameObject chargingHandle;
 
         public GameObject chargingHandle;
         public GameObject chargingHandleOffset;
-        //private Vector3 chargingHandleOrgPos;
 
-        //public float distToPullCharghingHandleWithHand = 0.3f;
         public float notchPullDistanceMax = 0.2f;
         private float currentDistPulled = 0f;
-        //public float minDistPullToShoot = 0.2f;
         public float shootSpeed = 20f;
-        //public float pulledDistShootSpeedMult = 2f;
 
         private bool currentlyPulled = false;
 
@@ -41,7 +34,6 @@ namespace Valve.VR.InteractionSystem.Sample
 
         public SteamVR_Action_Boolean shootAction = SteamVR_Input.GetAction<SteamVR_Action_Boolean>("Gun", "Shoot");
         public SteamVR_Action_Boolean ejectAction = SteamVR_Input.GetAction<SteamVR_Action_Boolean>("Gun", "Eject");
-        //public SteamVR_Action_Boolean pullAction = SteamVR_Input.GetAction<SteamVR_Action_Boolean>("Default", "InteractUI");    //Use grab instead of trigger
 
         public Transform barrelend;
 
@@ -56,12 +48,12 @@ namespace Valve.VR.InteractionSystem.Sample
 
         private bool shooting;
 
-
         public GameObject shellPrefab;
         public GameObject casingPrefab;
         public GameObject casingEjectionPort;
         public float casingEjectionSpeed = 5f;
         public float casingLifeTime = 1f;
+
 
         // Start is called before the first frame update
         void Awake()
@@ -77,7 +69,6 @@ namespace Valve.VR.InteractionSystem.Sample
             {
                 magazine.GetComponent<Collider>().enabled = false;
                 magazine.GetComponent<Rigidbody>().isKinematic = true;
-                //magazine.GetComponent<Interactable>().enabled = false;
             }
 
             timeToShoot = 60f / bpm;
@@ -92,7 +83,6 @@ namespace Valve.VR.InteractionSystem.Sample
             {
                 gunHand = interactable.attachedToHand;
                 gunHandType = gunHand.handType;
-                //shooting = shootAction[hand].state;
 
                 if (((isAutomatic == true && shootAction[gunHandType].state) || (isAutomatic == false && shootAction[gunHandType].stateDown))
                     && timePassed >= timeToShoot)
@@ -100,19 +90,19 @@ namespace Valve.VR.InteractionSystem.Sample
                     Shoot();
                 }
 
+                //If the charging hande is enabled and is being used
                 if (usingChargingHandle)
                 {
                     PullChargingHandle();
-
                     if (currentlyPulled)
                     {
                         PullingChargingHandle();
                     }
                 }
 
+                //If there is no magazine in the gun and the other gun is holding on, and that magazine is close enough, attatch that magazine to the gun
                 if(magazine == null)
                 {
-                    //Magazine mag = gunHand.otherHand.currentAttachedObject.GetComponent<Magazine>();
                     if(gunHand.otherHand.currentAttachedObject != null && gunHand.otherHand.currentAttachedObject.GetComponent<Magazine>() != null)
                     {
                         Magazine mag = gunHand.otherHand.currentAttachedObject.GetComponent<Magazine>();
@@ -122,11 +112,6 @@ namespace Valve.VR.InteractionSystem.Sample
                         }
                     }
                 }
-
-                //Debug.Log(chargingHandleOffset.transform.InverseTransformDirection(gunHand.otherHand.transform.position - chargingHandleOffset.transform.position));
-                //Vector3 char2ToChar1 = gunHand.otherHand.transform.position - chargingHandleOffset.transform.position;
-                //Vector3 localRelativePosition = chargingHandleOffset.transform.InverseTransformDirection(char2ToChar1);
-                //Debug.Log(localRelativePosition);
             }
 
             else if(currentlyPulled)
@@ -143,6 +128,7 @@ namespace Valve.VR.InteractionSystem.Sample
 
         void Shoot()
         {
+            //If a bullet is chambered in the gun, shoot
             if(bulletChambered == true)
             {
                 timePassed = 0;
@@ -151,6 +137,7 @@ namespace Valve.VR.InteractionSystem.Sample
                 bullet.GetComponent<Rigidbody>().velocity = barrelend.transform.forward * bulletSpeed;
                 Destroy(bullet, 5f);
 
+                //If there is a magazine attatched, try to get a new bullet chambered into the gun
                 if (magazine != null)
                     bulletChambered = magazine.GetNextBullet();
 
@@ -167,15 +154,12 @@ namespace Valve.VR.InteractionSystem.Sample
             magazine.GetComponent<Interactable>().enabled = true;
             magazine.gameObject.transform.parent = null;
 
-            //magazine.gameObject.GetComponent<Rigidbody>().velocity = GetComponent<Rigidbody>().velocity + new Vector3(0, -magazineEjectionSpeed, 0);
             magazine.gameObject.GetComponent<Rigidbody>().velocity += magazineEjectionSpeed * -transform.up;
             magazine = null;
         }
 
         void ReloadMagazine(Magazine mag)
         {
-
-
             //detach from hand;
             mag.GetComponent<Interactable>().attachedToHand.DetachObject(mag.gameObject);
             mag.GetComponent<Interactable>().enabled = false;
@@ -194,76 +178,20 @@ namespace Valve.VR.InteractionSystem.Sample
 
         void PullChargingHandle()
         {
-            if (gunHand.otherHand.currentAttachedObject == chargingHandle)    //If hand is holding chargingHandle
+            //If hand is holding the chargingHandle
+            if (gunHand.otherHand.currentAttachedObject == chargingHandle)
             {
                 currentlyPulled = true;
-
-                //Attach the hand to the notch location
-                //chargingHandle.GetComponent<Interactable>().attachedToHand = gunHand.otherHand;
-                //Grabbable grabbable = notch.GetComponent<Grabbable>();
-                //arrowHand.AttachObject(notch.gameObject, GrabTypes.Grip, grabbable.attachmentFlags, grabbable.attachmentOffset);
-                //(gameObject, startingGrabType, attachmentFlags, attachmentOffset);
-
-                //Debug.Log("attach");
             }
-
-            //if (pullAction[gunHand.otherHand.handType].stateDown
-            //    && Vector3.Distance(gunHand.otherHand.transform.position, chargingHandle.transform.position) <= distToPullCharghingHandleWithHand)     //if arrowHandisTrying to pull and the correct distance away
-            //{
-            //    if (gunHand.otherHand.currentAttachedObject == null)    //If hand is empty
-            //    {
-            //        currentlyPulled = true;
-
-            //        //Attach the hand to the notch location
-            //        chargingHandle.GetComponent<Interactable>().attachedToHand = gunHand.otherHand;
-            //        //Grabbable grabbable = notch.GetComponent<Grabbable>();
-            //        //arrowHand.AttachObject(notch.gameObject, GrabTypes.Grip, grabbable.attachmentFlags, grabbable.attachmentOffset);
-            //        //(gameObject, startingGrabType, attachmentFlags, attachmentOffset);
-
-            //        Debug.Log("attach");
-            //    }
-            //}
-
-            //if (pullAction[arrowHand.handType].stateDown
-            //                    && Vector3.Distance(arrowHand.transform.position, notch.transform.position) <= distToPullNotchWithHand)     //if arrowHandisTrying to pull and the correct distance away
-            //{
-            //    if (arrowHand.currentAttachedObject == null
-            //        || arrowHand.currentAttachedObject.GetComponent<MyArrow>() != null)                                               //If hand is empty or holding an arrow
-            //    {
-            //        currentlyPulled = true;
-
-            //        //Attach the hand to the notch location
-            //        notch.GetComponent<Interactable>().attachedToHand = arrowHand;
-            //        //Grabbable grabbable = notch.GetComponent<Grabbable>();
-            //        //arrowHand.AttachObject(notch.gameObject, GrabTypes.Grip, grabbable.attachmentFlags, grabbable.attachmentOffset);
-            //        //(gameObject, startingGrabType, attachmentFlags, attachmentOffset);
-
-            //        Debug.Log("attach");
-
-            //        if (arrowHand.currentAttachedObject.GetComponent<MyArrow>() != null)
-            //        {
-            //            GameObject arrow = arrowHand.currentAttachedObject;
-
-            //            arrow.transform.position = notch.transform.position;
-            //            arrow.transform.rotation = notch.transform.rotation;
-            //            //arrowHand.DetachObject(arrow);
-            //            //arrow.transform.parent = notch.transform;
-            //        }
-            //    }
-            //}
-
-
         }
 
         void PullingChargingHandle()
         {
-
-            //float handChargeHandleDist = Mathf.Abs(Vector3.Distance(gunHand.otherHand.transform.position, chargingHandleOffset.transform.position));
             float handChargeHandleDist = chargingHandleOffset.transform.InverseTransformDirection(gunHand.otherHand.transform.position - chargingHandleOffset.transform.position).z;
-            //Debug.Log(chargingHandleOffset.transform.InverseTransformPoint(gunHand.otherHand.transform.position));
-
             handChargeHandleDist = Mathf.Abs(handChargeHandleDist);
 
+            //If the charging handle has been pulled back enough to eject a bullet
+            //eject the bullet if there is one and if there is a magazine attached, try to get a new bullet chambered and release the charging handle
             if (handChargeHandleDist >= notchPullDistanceMax)
             {
                 if (bulletChambered)
@@ -291,23 +219,11 @@ namespace Valve.VR.InteractionSystem.Sample
         {
             currentlyPulled = false;
 
-            //release the hand from the notch location
-            //chargingHandle.GetComponent<Interactable>().attachedToHand = null;
             gunHand.otherHand.DetachObject(chargingHandle);
 
             chargingHandle.transform.position = chargingHandleOffset.transform.position;
             currentDistPulled = 0;
-
-            //Debug.Log("dettach");
         }
-
-        //private void ontriggerenter(collider other)
-        //{
-        //    if(other.getcomponent<magazine>() != null && magazine == null && other.getcomponent<interactable>().attachedtohand == gunhand.otherhand)
-        //    {
-        //        reloadmagazine(other.gameobject.getcomponent<magazine>());
-        //    }
-        //}
 
         void EjectCasing(GameObject prefabCasing)
         {

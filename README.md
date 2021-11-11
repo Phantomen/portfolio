@@ -33,8 +33,8 @@ https://awombatplayinggames.itch.io/galactic-dance-off
 
 
 
-##Coding examples:
-https://github.com/Phantomen/portfolio/blob/changes/Scripts/Bow.cs
+##Coding examples:  
+https://github.com/Phantomen/portfolio/blob/changes/Scripts/Bow.cs  
 https://github.com/Phantomen/portfolio/blob/changes/Scripts/GunRealistic.cs
 
 ------------------------------------------------------------------------------------------------------

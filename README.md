@@ -15,15 +15,15 @@ Programming languages:
 
 ### T.R.A.S.H.
 T.R.A.S.H. is a bullethell game developed by nine students from Skövde University during the course "Game Development Project 1" during our first year  
-Link: https://drive.google.com/file/d/1pCr_dDzFhynWTRUnARX_zlLDBr2qERPG/view
+Link: [Drive](https://drive.google.com/file/d/1pCr_dDzFhynWTRUnARX_zlLDBr2qERPG/view)
 <img src="https://github.com/Phantomen/portfolio/blob/main/Screenshots/TRASH_screenshot.png"/>
 
 
 ### Galactic Dance Off
 Galactic Dance Off is a rhythm based game developed by thirteen students from Skövde University during the course "Game Development Project 2" during our second year  
-Links: https://www.gameawards.se/Games/2019/Galactic-Dance-Off  
-https://www.facebook.com/NepTunesEntertainment/  
-https://awombatplayinggames.itch.io/galactic-dance-off
+Links: [Game awards](https://www.gameawards.se/Games/2019/Galactic-Dance-Off)  
+[Facebook](https://www.facebook.com/NepTunesEntertainment/)  
+[Homepage](https://awombatplayinggames.itch.io/galactic-dance-off)
 
 <img src="https://img.itch.zone/aW1nLzI2MTQyOTEucG5n/original/jUJsIx.png"/>
 <img src="https://img.itch.zone/aW1hZ2UvNTA0NjQ4LzI2MTQyMTkucG5n/original/fSlFHN.png"/>
@@ -34,5 +34,5 @@ https://awombatplayinggames.itch.io/galactic-dance-off
 
 
 ##Coding examples:  
-https://github.com/Phantomen/portfolio/blob/main/Scripts/Bow.cs  
-https://github.com/Phantomen/portfolio/blob/main/Scripts/GunRealistic.cs
+[Bow VR](https://github.com/Phantomen/portfolio/blob/main/Scripts/Bow.cs)  
+[Realistic gun VR](https://github.com/Phantomen/portfolio/blob/main/Scripts/GunRealistic.cs)

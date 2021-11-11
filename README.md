@@ -14,7 +14,7 @@ Programming languages:
 ## Previous game projects
 
 ### T.R.A.S.H.
-T.R.A.S.H. is a bullethell game developed by nine students from Skövde University during the course "Game Development Project 1" during our first year  
+T.R.A.S.H. is a bullet hell game developed by nine students from Skövde University during the course "Game Development Project 1" during our first year  
 Link: [Drive](https://drive.google.com/file/d/1pCr_dDzFhynWTRUnARX_zlLDBr2qERPG/view)  
 
 <img src="https://raw.githubusercontent.com/Phantomen/portfolio/main/Screenshots/TRASH_screenshot.png"/>

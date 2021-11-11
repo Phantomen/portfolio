@@ -1,11 +1,11 @@
 # About me
-I am a programmer who went to the Univerity of Skövde to study game programming for three years. 
+I am a programmer who went to the Univerity of Skövde to study game programming for three years.  
 Programming languages:
-## Most experience
+### Most experience
 - C#
 - C++
 
-## Some Experience
+### Some Experience
 - Assembly
 - OpenGL
 - Java
@@ -33,20 +33,9 @@ https://awombatplayinggames.itch.io/galactic-dance-off
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-<img src=""/>
+##Coding examples:
+https://github.com/Phantomen/portfolio/blob/changes/Scripts/Bow.cs
+https://github.com/Phantomen/portfolio/blob/changes/Scripts/GunRealistic.cs
 
 ------------------------------------------------------------------------------------------------------
 

@@ -7,7 +7,7 @@ namespace Valve.VR.InteractionSystem.Sample
     public class Bow : MonoBehaviour
     {
         public SteamVR_Action_Boolean pullAction = SteamVR_Input.GetAction<SteamVR_Action_Boolean>("Default", "InteractUI");
-        //public SteamVR_Action_Boolean pullAction = SteamVR_Input.GetAction<SteamVR_Action_Boolean>("Bow", "Pull");
+
 
         Interactable interactable;
         public GameObject notch;
@@ -36,16 +36,19 @@ namespace Valve.VR.InteractionSystem.Sample
         // Update is called once per frame
         void Update()
         {
+            //If bow is being held, set the hand holding it and set the other hand to the hand that holds the arrows
             if (interactable.attachedToHand)
             {
                 bowHand = interactable.attachedToHand;
                 arrowHand = bowHand.otherHand;
 
+                //if arrowHand is trying to pull and the correct distance away from the notch
                 if (pullAction[arrowHand.handType].stateDown
-                    && Vector3.Distance(arrowHand.transform.position, notch.transform.position) <= distToPullNotchWithHand)     //if arrowHandisTrying to pull and the correct distance away
+                    && Vector3.Distance(arrowHand.transform.position, notch.transform.position) <= distToPullNotchWithHand)
                 {
+                    //If arrow hand is empty or holding an arrow
                     if (arrowHand.currentAttachedObject == null
-                        || arrowHand.currentAttachedObject.GetComponent<MyArrow>() != null)                                               //If hand is empty or holding an arrow
+                        || arrowHand.currentAttachedObject.GetComponent<MyArrow>() != null)
                     {
                         AttachNotch();
 
@@ -55,15 +58,15 @@ namespace Valve.VR.InteractionSystem.Sample
 
                             arrow.transform.position = notch.transform.position;
                             arrow.transform.rotation = notch.transform.rotation;
-                            //arrowHand.DetachObject(arrow);
-                            //arrow.transform.parent = notch.transform;
+
                         }
                     }
                 }
 
-                //pullAction[arrowHand.handType].onStateUp +=
+                //If the arrowhand was pulling and released the notch
                 else if (pullAction[arrowHand.handType].stateUp && currentlyPulled)
                 {
+                    //If arrowhand was holding an arrow, release it and shoot it forward based on the distance the notch was pulled
                     if (arrowHand.currentAttachedObject != null && arrowHand.currentAttachedObject.GetComponent<MyArrow>() != null && currentDistPulled >= minDistPullToShoot)
                     {
                         GameObject arrow = arrowHand.currentAttachedObject;
@@ -77,6 +80,7 @@ namespace Valve.VR.InteractionSystem.Sample
 
                         arrow.GetComponent<MyArrow>().Shot();
 
+                        //Make it so that the arrow can't collide with the bow for 0.5 seconds
                         Physics.IgnoreCollision(arrow.GetComponent<Collider>(), gameObject.GetComponent<Collider>(), true);
                         EnableCollision(arrow.GetComponent<Collider>(), gameObject.GetComponent<Collider>(), 0.5f);
                     }
@@ -94,8 +98,6 @@ namespace Valve.VR.InteractionSystem.Sample
 
                         arrow.transform.position = notch.transform.position;
                         arrow.transform.rotation = notch.transform.rotation;
-                        //arrowHand.DetachObject(arrow);
-                        //arrow.transform.parent = notch.transform;
                     }
                 }
             }
@@ -119,11 +121,6 @@ namespace Valve.VR.InteractionSystem.Sample
 
             //Attach the hand to the notch location
             notch.GetComponent<Interactable>().attachedToHand = arrowHand;
-            //Grabbable grabbable = notch.GetComponent<Grabbable>();
-            //arrowHand.AttachObject(notch.gameObject, GrabTypes.Grip, grabbable.attachmentFlags, grabbable.attachmentOffset);
-            //(gameObject, startingGrabType, attachmentFlags, attachmentOffset);
-
-            Debug.Log("attach");
         }
 
         void ReleaseNotch()
@@ -133,24 +130,17 @@ namespace Valve.VR.InteractionSystem.Sample
             //release the hand from the notch location
             notch.GetComponent<Interactable>().attachedToHand = null;
 
+            //Set the notch back to the position where it is not pulled
             notch.transform.position = notchOffset.transform.position;
             currentDistPulled = 0;
-
-            Debug.Log("dettach");
         }
 
+        //Pull the notch based on how far back the bow was pulled
         void PullNotch()
         {
             float handNotchDist = -notchOffset.transform.InverseTransformDirection(arrowHand.transform.position - notchOffset.transform.position).z;
-            //handNotchDist = Mathf.Abs(handNotchDist);
-
-            //float handNotchDist = Mathf.Abs(Vector3.Distance(arrowHand.transform.position, notchOffset.transform.position));
-
             currentDistPulled = Mathf.Clamp(handNotchDist, 0f, notchPullDistanceMax);
-
             notch.transform.localPosition = new Vector3(0, 0, -currentDistPulled);
-
-            //Debug.Log(handNotchDist);
         }
     }
 }

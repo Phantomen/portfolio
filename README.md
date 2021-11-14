@@ -1,14 +1,19 @@
 # About me
-I am a programmer who went to the Univerity of Skövde to study game programming for three years.  
-Programming languages:
+Hello, I'm Robin Sollfors and this is my portfolio  
+<img src="https://scontent-arn2-2.xx.fbcdn.net/v/t39.30808-6/p206x206/242050260_5125148737501565_1959772953239072652_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=da31f3&_nc_ohc=TNZYkFduifMAX_4Qbus&_nc_ht=scontent-arn2-2.xx&oh=c2cf9716b21644ff12cc800ddf66b39f&oe=61967DF0"/>  
+I'm a programmer who went to the Univerity of Skövde to study game programming for three years.  
+
+
+## Programming languages:
 ### Most experience
 - C#
 - C++
 
-### Some Experience
+### Lesser Experience
 - Assembly
-- OpenGL
+- GLSL
 - Java
+- C
 
 
 ## Previous game projects
@@ -38,3 +43,4 @@ Links: [Game awards](https://www.gameawards.se/Games/2019/Galactic-Dance-Off)
 ## Coding examples:  
 [Bow VR](https://github.com/Phantomen/portfolio/blob/main/Scripts/Bow.cs)  
 [Realistic gun VR](https://github.com/Phantomen/portfolio/blob/main/Scripts/GunRealistic.cs)
+[Invader game](https://github.com/Phantomen/portfolio/tree/main/Scripts/Invaders)

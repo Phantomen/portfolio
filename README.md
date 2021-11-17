@@ -41,6 +41,6 @@ Links: [Game awards](https://www.gameawards.se/Games/2019/Galactic-Dance-Off)
 
 
 ## Coding examples:  
-[Bow VR](https://github.com/Phantomen/portfolio/blob/main/Scripts/Bow.cs)  
-[Realistic gun VR](https://github.com/Phantomen/portfolio/blob/main/Scripts/GunRealistic.cs)  
-[Invader game](https://github.com/Phantomen/portfolio/tree/main/Scripts/Invaders)
+[Bow VR (C#)](https://github.com/Phantomen/portfolio/blob/main/Scripts/Bow.cs)  
+[Realistic gun VR (C#)](https://github.com/Phantomen/portfolio/blob/main/Scripts/GunRealistic.cs)  
+[Invader game (C++)](https://github.com/Phantomen/portfolio/tree/main/Scripts/Invaders)

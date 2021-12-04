@@ -1,6 +1,6 @@
 # About me
 Hello, I'm Robin Sollfors, I'm a 23 year old from sweden and I studied game development and programming in Skövde University and this is my portfolio  
-<img src="https://github.com/Phantomen/portfolio/blob/main/Screenshots/242050260_5125148737501565_1959772953239072652_n.jpg"/>  
+<img src="/Screenshots/242050260_5125148737501565_1959772953239072652_n.jpg"/>  
 I'm a programmer who went to the Univerity of Skövde to study game programming for three years.  
 
 
@@ -22,7 +22,7 @@ I'm a programmer who went to the Univerity of Skövde to study game programming 
 T.R.A.S.H. is a bullet hell game developed by nine students from Skövde University during the course "Game Development Project 1" during our first year  
 Link: [Drive](https://drive.google.com/file/d/1pCr_dDzFhynWTRUnARX_zlLDBr2qERPG/view)  
 
-<img src="https://raw.githubusercontent.com/Phantomen/portfolio/main/Screenshots/TRASH_screenshot.png"/>
+<img src="/Screenshots/TRASH_screenshot.png"/>
 
 
 

@@ -1,0 +1,318 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1433654494997372}
+  m_IsPrefabParent: 1
+--- !u!1 &1433654494997372
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4020834211041530}
+  - component: {fileID: 114865378127122632}
+  - component: {fileID: 114490258593990380}
+  - component: {fileID: 114591004174479440}
+  - component: {fileID: 114175361382409012}
+  - component: {fileID: 114923135463861602}
+  - component: {fileID: 114968877070492246}
+  m_Layer: 0
+  m_Name: Stage1 path1 wave3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4020834211041530
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1433654494997372}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114175361382409012
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1433654494997372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 924df4c68ad59e943b47b75f2323f73a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  showHandles: 1
+  hidden: 0
+  parent: {fileID: 114591004174479440}
+  ccName: 
+  distance: 0
+  handlesScale: 1
+  handlesColor: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &114490258593990380
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1433654494997372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e70f079e2a6bf364e8185b765fbe61c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settings:
+    hideHandles: 0
+    newPointDistance: 2
+    showCurve: 1
+    showCurveMode: 1
+    sections: 20
+    showPointMenu: 1
+    showTangents: 0
+    tangentsSize: 0.7
+    tangentsColor: {r: 1, g: 1, b: 1, a: 1}
+    tangentsPerSection: 1
+    controlType: 0
+    vRay: 0
+    lineColor: {r: 1, g: 0, b: 0, a: 1}
+    showPointControlType: 1
+    showPointPosition: 1
+    showHandles: 1
+    handlesType: 0
+    handlesSettings:
+      RemoveX: 0
+      RemoveY: 0
+      RemoveZ: 1
+      RemoveXZ: 1
+      RemoveXY: 0
+      RemoveYZ: 1
+      AxisScale: 1
+      PlanesScale: 1
+      Alpha: 1
+    showLabels: 1
+    labelColor: {r: 1, g: 1, b: 1, a: 1}
+    showPositions: 0
+    labelColorSelected: {r: 0, g: 1, b: 0, a: 1}
+    showSpheres: 1
+    sphereRadius: 0.1
+    sphereColor: {r: 1, g: 0, b: 0, a: 1}
+    showPointControlPositions: 1
+    showControlHandles: 1
+    controlHandlesType: 0
+    controlHandlesSettings:
+      RemoveX: 0
+      RemoveY: 0
+      RemoveZ: 1
+      RemoveXZ: 1
+      RemoveXY: 0
+      RemoveYZ: 1
+      AxisScale: 0.7
+      PlanesScale: 0.7
+      Alpha: 0.7
+    controlHandlesColor: {r: 0, g: 1, b: 1, a: 1}
+    showControlLabels: 1
+    showControlPositions: 0
+    labelControlColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+    showTransformField: 0
+    existing: 1
+  mode2D: 1
+  closed: 0
+  points:
+  - controlType: 0
+    positionLocal: {x: 0, y: 6, z: 0}
+    controlFirstLocal: {x: 0, y: 0, z: 0.05}
+    controlSecondLocal: {x: 0, y: 0, z: -0.05}
+    pointTransform: {fileID: 0}
+    curve: {fileID: 114490258593990380}
+    fieldsValues: []
+  - controlType: 0
+    positionLocal: {x: 0, y: 3, z: 0}
+    controlFirstLocal: {x: 1, y: 0, z: 0}
+    controlSecondLocal: {x: -1, y: 0, z: 0}
+    pointTransform: {fileID: 0}
+    curve: {fileID: 114490258593990380}
+    fieldsValues: []
+  - controlType: 0
+    positionLocal: {x: 0, y: 6, z: 0}
+    controlFirstLocal: {x: 1, y: 0, z: 0}
+    controlSecondLocal: {x: -1, y: 0, z: 0}
+    pointTransform: {fileID: 0}
+    curve: {fileID: 114490258593990380}
+    fieldsValues: []
+  pointsComponents: []
+  pointsGameObjects: []
+  fields: []
+  snapType: 0
+  snapAxis: 1
+  snapDistance: 10
+  snapLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  snapTriggerInteraction: 0
+  snapToBackFaces: 0
+  eventMode: 0
+  pointsMode: 0
+  forceChangedEventMode: 0
+--- !u!114 &114591004174479440
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1433654494997372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6d20671ad38ded4fa2362df353b9a31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  showHandles: 1
+  hidden: 0
+  parent: {fileID: 0}
+  ccName: 
+  fields: 1
+  mathType: 0
+  sectionParts: 30
+  optimizeStraightLines: 0
+  tolerance: 0.2
+  usePositionToCalculateTangents: 0
+  updateMode: 0
+  rendererForUpdateCheck: {fileID: 0}
+  mathChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: BansheeGz.BGSpline.Components.BGCcMath+MathChangedEvent, Assembly-CSharp,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  spheresScale: 1
+  spheresColor: {r: 1, g: 1, b: 1, a: 1}
+  spheresCount: 100
+--- !u!114 &114865378127122632
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1433654494997372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ec333749ec55984b86990b3b61d1fde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingSpeed: 1
+  overflowType: 0
+  destroyOnEndPoints: 1
+  destructionType: 0
+  resetActionAfterCycle: 1
+  sameActionsBack: 0
+  resetActionsBack: 0
+  resetPingPongAfterCompleted: 1
+  numberOfTurns: 0
+  pointActionList:
+  - doSomething: 0
+    currentlyDoingSomething: 0
+    beenTriggered: 0
+    changeSpeed: 0
+    startSpeed: 0
+    newSpeed: 0
+    shootPatterns: []
+    stoppedTime: 0
+    stopActionAfterPoints: 0
+    currentPointAfter: 0
+    stopActionAfterTime: 0
+    stopActionTime: 0
+  - doSomething: 1
+    currentlyDoingSomething: 0
+    beenTriggered: 0
+    changeSpeed: 0
+    startSpeed: 0
+    newSpeed: 0
+    shootPatterns: []
+    stoppedTime: 20
+    stopActionAfterPoints: 0
+    currentPointAfter: 0
+    stopActionAfterTime: 1
+    stopActionTime: 20
+  - doSomething: 0
+    currentlyDoingSomething: 0
+    beenTriggered: 0
+    changeSpeed: 0
+    startSpeed: 0
+    newSpeed: 0
+    shootPatterns: []
+    stoppedTime: 0
+    stopActionAfterPoints: 0
+    currentPointAfter: 0
+    stopActionAfterTime: 0
+    stopActionTime: 0
+  - doSomething: 0
+    currentlyDoingSomething: 0
+    beenTriggered: 0
+    changeSpeed: 0
+    startSpeed: 0
+    newSpeed: 0
+    shootPatterns: []
+    stoppedTime: 0
+    stopActionAfterPoints: 0
+    currentPointAfter: 0
+    stopActionAfterTime: 0
+    stopActionTime: 0
+  repeatingCircle: 0
+  repeatCircle: []
+  bouncingBetweenPoints: 0
+  bounceBetweenPoints: {x: 0, y: 0}
+  objectPrefab: {fileID: 1659046324469548, guid: 00c7b19d3bdbb3d4db6d43e674da8e22,
+    type: 2}
+  destroyObjectTimeAfterPathDestroyed: 20
+--- !u!114 &114923135463861602
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1433654494997372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 535a3a5d00075854a98f71fdd486b248, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  showHandles: 1
+  hidden: 0
+  parent: {fileID: 114175361382409012}
+  ccName: 
+  useFixedUpdate: 0
+  speed: 5
+  overflowControl: 0
+  adjustByTotalLength: 0
+  speedField: {fileID: 0}
+  delay: 0
+  delayField: {fileID: 0}
+  pointReachedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: BansheeGz.BGSpline.Components.BGCcCursorChangeLinear+PointReachedEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+--- !u!114 &114968877070492246
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1433654494997372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d916ef28168e544d9dc5bb790f67ba0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  showHandles: 1
+  hidden: 0
+  parent: {fileID: 114175361382409012}
+  ccName: 
+  objectToManipulate: {fileID: 0}

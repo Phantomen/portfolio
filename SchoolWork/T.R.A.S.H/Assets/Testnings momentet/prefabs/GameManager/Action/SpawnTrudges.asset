@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a197bbe4be69464ba4aec49f1f7492b, type: 3}
+  m_Name: SpawnTrudges
+  m_EditorClassIdentifier: 
+  spawnList:
+  - minionPrefabs:
+    - {fileID: 1052713426006280, guid: 549f6269ad27e1f4d8dc347114ba1727, type: 2}
+    spawnStartDelay: 0
+    delayBetweenSpawns: 0
+    numberOfSpawns: 1
+    currentSpawnCount: 1
+    destroySpawnedAfterTime: 0
+    spawnFromObject: 0
+    lifeTime: 0
+    currentDelay: 0
+    currentTime: 2.1599987
+  orbitSpawnList: []

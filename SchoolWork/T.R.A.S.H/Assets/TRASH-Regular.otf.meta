@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 67fc100ae3c105240aa9ca82b9c3663d
+timeCreated: 1518619069
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: T R A S H
+  fontNames:
+  - T R A S H
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

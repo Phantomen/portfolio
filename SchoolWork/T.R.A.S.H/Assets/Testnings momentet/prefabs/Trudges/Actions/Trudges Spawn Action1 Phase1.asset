@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a197bbe4be69464ba4aec49f1f7492b, type: 3}
+  m_Name: Trudges Spawn Action1 Phase1
+  m_EditorClassIdentifier: 
+  spawnList: []
+  orbitSpawnList: []
+  pickUpList:
+  - minionPrefabs:
+    - {fileID: 1376363903520440, guid: 7e590b80fad8dc34288bb8dddf97806f, type: 2}
+    - {fileID: 1110750066618058, guid: 6eac3373a57ceff4893e5c18e9ad44cd, type: 2}
+    - {fileID: 1140019591317774, guid: 48aa0b0b14edbc94a996dddd1d3a6788, type: 2}
+    - {fileID: 1255224754391942, guid: e2efd127fbe2a6143aebbb52504d42b8, type: 2}
+    spawnStartDelay: 0
+    delayBetweenSpawns: 0
+    numberOfSpawns: 1
+    currentSpawnCount: 1
+    destroySpawnedAfterTime: 0
+    spawnFromObject: 0
+    lifeTime: 0
+    currentDelay: 0
+    currentTime: 8.860013

@@ -1,0 +1,176 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1224027911022068}
+  m_IsPrefabParent: 1
+--- !u!1 &1224027911022068
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4648285351178662}
+  - component: {fileID: 212246802134963850}
+  - component: {fileID: 114007940327328364}
+  - component: {fileID: 114863925910433242}
+  - component: {fileID: 114275528115310084}
+  - component: {fileID: 114204025132708176}
+  m_Layer: 0
+  m_Name: Lasernode
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4648285351178662
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1224027911022068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.49, y: -1.04, z: 0}
+  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114007940327328364
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1224027911022068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a664f7615691714bafcd7fe4f8ea258, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveTo: {x: -3.75, y: 3.7}
+  Speed: 1
+  moveDelay: 1
+  willMove: 0
+--- !u!114 &114204025132708176
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1224027911022068}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f099de194c5618447aabddd6fed471e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  laserPrefab: {fileID: 1296081081461362, guid: f3358a398db17444d9838a710f3a5840,
+    type: 2}
+  distanceFromCenter: {x: 0, y: 0, z: 0}
+  laserAmount: 4
+  angleOffset: 360
+  startingRotation: 0
+  maxSize: 1
+  growthSpeed: 1
+  EnableRotation: 1
+  startRotatingRight: 1
+  timePerPause: 3
+  laserStopTimer: 2
+  turnSpeed: 20
+--- !u!114 &114275528115310084
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1224027911022068}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5486837ae91080f409d96e14a06e1420, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  laserPrefab: {fileID: 1296081081461362, guid: f3358a398db17444d9838a710f3a5840,
+    type: 2}
+  distanceFromCenter: {x: 0, y: 0, z: 0}
+  maxSize: 1
+  growthSpeed: 1
+  EnableRotation: 1
+  startRotatingRight: 1
+  timePerWave: 5
+  degreesFromCenter: 25
+  timePerPause: 3.8
+  laserStopTimer: 2
+--- !u!114 &114863925910433242
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1224027911022068}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a434730a25bced44eba97dd3ed9b927d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  warningLaser: {fileID: 1653378150125998, guid: 7231c4232f77e64438d1b62663c35bec,
+    type: 2}
+  activeLaser: {fileID: 1296081081461362, guid: a9819ce4f7ad8124eb151887023c18bb,
+    type: 2}
+  playerObject: {fileID: 0}
+  distanceFromCenter: {x: 0, y: 0, z: 0}
+  laserReadyTimer: 0.5
+  laserLoadUpTimer: 0.5
+  laserStayActiveTimer: 0.5
+  laserMaxSize: 1
+  laserGrowthSpeed: 1
+  warningLaserSound: {fileID: 8300000, guid: 30bf9090bb375934c9f7e35810ec2c89, type: 3}
+  activeLaserSound: {fileID: 8300000, guid: 0b6a7830654a68c4699e4887eaffde7e, type: 3}
+  windDownLaserSound: {fileID: 8300000, guid: a042bbddf6dee4346867ec02fba9decb, type: 3}
+--- !u!212 &212246802134963850
+SpriteRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1224027911022068}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 1111977943
+  m_SortingLayer: 4
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.2, y: 0.2}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0

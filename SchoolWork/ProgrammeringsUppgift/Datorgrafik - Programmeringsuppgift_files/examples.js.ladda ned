@@ -1,0 +1,69 @@
+
+var examples = ["s1house", "s1colors", "s1objects", "s1blending", "s2planets", "s3views"];
+
+
+
+function onload()
+{
+	let divs = document.getElementsByTagName("div");
+
+	let index = 0;
+	for (let div of Array.from(divs))
+	{
+		if (div.className.startsWith("example"))
+		{
+			if (div.className == "example")
+			{
+				div.innerHTML = '<canvas class="example" width="400" height="250"></canvas>';
+				div.innerHTML += '<button class="example" onclick="play(this, ' + index + ')">Visa exempel</button>';
+			}
+			else
+			{
+				div.innerHTML = '<canvas class="example" width="700" height="250"></canvas>';
+				div.innerHTML += '<button class="example_wide" onclick="play(this, ' + index + ')">Visa exempel</button>';
+			}
+
+			index++;
+		}
+	}
+
+	index = 0;
+	for (let div of Array.from(divs))
+	{
+		if (div.className.startsWith("example"))
+		{
+			let context = div.children[0].getContext("webgl");
+			if (context)
+			{
+				let main = examples[index] + "_main";
+				let frame = examples[index] + "_frame";
+				let callbackTextures = examples[index] + "_frameCallbackTextures";
+
+				window[main](context);
+
+				if (window[callbackTextures] === undefined)
+					window[frame](0, 0);
+				else
+					window.requestAnimationFrame(window[callbackTextures]);
+			}
+			index++;
+		}
+	}
+
+
+}
+
+
+
+function play(button, index)
+{
+	button.style.display = "none";
+
+	let shared = examples[index] + "_shared";
+	window[shared].button = button;
+	window[shared].time = 0;
+	window[shared].previousTime = performance.now();
+
+	let callback = examples[index] + "_frameCallback";
+	window.requestAnimationFrame(window[callback]);
+}

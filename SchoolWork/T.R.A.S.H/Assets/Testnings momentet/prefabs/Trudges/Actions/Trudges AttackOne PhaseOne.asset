@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a9c78576bd46df4ab8ddaeb27b24fcb, type: 3}
+  m_Name: Trudges AttackOne PhaseOne
+  m_EditorClassIdentifier: 
+  shotPattern: {fileID: 114822272774832264, guid: fd8e849163bf66a47b62cd9fbba02030,
+    type: 2}
+  bulletSpawnList: []

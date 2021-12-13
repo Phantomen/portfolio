@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a197bbe4be69464ba4aec49f1f7492b, type: 3}
+  m_Name: SpawnActionWave1
+  m_EditorClassIdentifier: 
+  spawnList:
+  - minionPrefabs:
+    - {fileID: 1651789391008992, guid: 324d308ccfceca347ab8705eda8a1089, type: 2}
+    spawnStartDelay: 0
+    delayBetweenSpawns: 3
+    numberOfSpawns: 10
+    currentSpawnCount: 4
+    destroySpawnedAfterTime: 0
+    spawnFromObject: 0
+    lifeTime: 0
+    currentDelay: 3
+    currentTime: 2.0799923
+  orbitSpawnList: []
+  pickUpList:
+  - minionPrefabs:
+    - {fileID: 1659590428255722, guid: 9073bc16836508c47bd1e1507e148c32, type: 2}
+    - {fileID: 1661135269410120, guid: cc3f273c10156b54c9506843a3491b81, type: 2}
+    - {fileID: 1275898777832790, guid: de6b005e461723e468bf89f1f0f41c12, type: 2}
+    - {fileID: 1701385711309552, guid: cd738d69d4713084c9e3c6b0278e3df0, type: 2}
+    spawnStartDelay: 0
+    delayBetweenSpawns: 0
+    numberOfSpawns: 1
+    currentSpawnCount: 1
+    destroySpawnedAfterTime: 0
+    spawnFromObject: 0
+    lifeTime: 0
+    currentDelay: 0
+    currentTime: 11.080064

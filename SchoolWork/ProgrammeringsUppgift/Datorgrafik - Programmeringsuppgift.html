@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<!-- saved from url=(0105)https://scio.his.se/access/content/group/IT101G-20172-01/Programmeringsuppgift/Programmeringsuppgift.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Datorgrafik - Programmeringsuppgift</title>
+    <link rel="stylesheet" href="./Datorgrafik - Programmeringsuppgift_files/style.css">
+    <script src="./Datorgrafik - Programmeringsuppgift_files/gl-matrix-min.js.ladda ned"></script>
+    <script src="./Datorgrafik - Programmeringsuppgift_files/twgl-full.min.js.ladda ned"></script>
+    <script src="./Datorgrafik - Programmeringsuppgift_files/camera.js.ladda ned"></script>
+    <script src="./Datorgrafik - Programmeringsuppgift_files/common.js.ladda ned"></script>
+    <script src="./Datorgrafik - Programmeringsuppgift_files/examples2.js.ladda ned"></script>
+    <script src="./Datorgrafik - Programmeringsuppgift_files/examples.js.ladda ned"></script>
+  </head>
+
+  
+  <body onload="onload()">
+    <h2>Om programmeringsuppgiften</h2>
+
+    <p>
+      I programmeringsuppgiften ska du praktiskt använda några av begreppen och teknikerna som ryms inom kursen på ett sätt som är typiskt för grafikprogrammering. Den här praktiska uppgiften är en viktig länk mellan att veta och att göra och en början på utforskandet av gränssnitt för grafikprogrammering mot GPU:er. Du kommer att använda WebGL som gränssnitt som i sin tur bygger på gränssnittet OpenGL vilket har en bred användning inom spel, program och andra grafikinriktade projekt. 
+    </p>
+
+    <p>
+      WebGL-kod skrivs i språket javascript och körs i en webbläsare via en webbsida. Alla etablerade webbläsare har stöd för att köra WebGL, även de på mobila enheter. Du är rekommenderad att använda läsaren <span class="english">Firefox</span> då uppgiften främst är testad i denna och det är också den läsare vi har installerad i våra salar. När du programmerar WebGL arbetar du med javascript-koden i en valfri texteditor, när du sedan vill provköra din kod sparar du dina ändringar och laddar om webbsidan i webbläsaren. Det finns verktyg i webbläsare för programmerare som normalt är deaktiverade, du behöver aktivera och använda dessa för att kunna felsöka din kod via bland annat felmeddelanden.
+    </p>
+
+    <p>
+      För att genomföra uppgiften krävs det att du använder och behärskar språket javascript. I uppgiften använder du dock språket procedurellt vilket gör det syntaxmässigt väldigt likt motsvarande delar i C++. Det går att slutföra uppgiften genom att endast skriva javascript-kod men det finns också en möjlighet för dig att lära dig andra delar av webbprogrammering genom att exempelvis styra din kod via HTML-element eller att forma webbsidan med CSS-beskrivningar.
+    </p>
+
+    <p>
+      Uppgiften är skriven som en steg-för-steg-instruktion med relativt lite utrymme för tolkning, egna förslag och variationer. För att slutföra uppgiften behöver du säkerställa att du har löst alla steg. Uppgiften är indelad i tre deluppgifter med olika teman men också för att startkoden för varje deluppgift skiljer sig mellan dem. Startkoden innehåller en struktur för att rendera grafik genom WebGL och gör bland annat förberedande steg. Du behöver skapa dig en bild av vad de olika delarna i koden ungefärligen gör och var du lämpligast lägger in din egen kod. Tanken är inte att du ska greppa alla ingående delar och detaljer utan att du främst ska se det övergripande syftet hos varje del.
+    </p>
+
+    <p>
+      I arbetet med uppgiften behöver du läsa och använda dokumentation för programmerare i form av referensinformation. Gränssnittet WebGL finns beskrivet och likaså de hjälpbibliotek som används i koden. Nedan finns en lista med länkar till referensinformation som du är rekommenderad att använda.
+    </p>
+    <ul>
+      <li><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext">WebGL på MDN</a>: Beskriver alla funktioner och länkar även till motsvarande OpenGL-information.</li>
+      <li><a target="_blank" href="http://glmatrix.net/docs/">glMatrix</a>: Hjälpbibliotek för att hantera vektorer och matriser.</li>
+      <li><a target="_blank" href="https://twgljs.org/docs/">TWGL</a>: Hjälpbibliotek som här används för att skapa objektprimitiver.</li>
+    </ul>
+    
+    <p>
+      Det finns naturligtvis andra källor som du också kan använda, speciellt om du behöver söka information om hur exempelvis funktioner används i praktiken. Referensinformation förklarar sällan koncept och hur delarna är tänkta att fungera ihop. 
+    </p>
+
+    <h2>Inlämning och bedömning</h2>
+
+    <p>
+      Uppgiften ska lämnas in genom att dels visa deluppgifter och dels genom att skicka in all kod. Deluppgifterna "bockas av" under handledningstid hos någon av lärarna och all koden lämnas in i inlämmningsmappen på kurssajten. Lämna in din kod i ett arkiv som innehåller samtliga filer (zip-format). Koden ska lämnas in senast sista kursveckan.
+    </p>
+
+    <p>
+      Programmeringsuppgiften genomförs individuellt vilket innebär att varje student skriver sina egna lösningar. Det är tillåtet och rekommenderat att diskutera uppgiften tillsammans med andra studenter men den slutgiltiga koden ska skrivas av dig. Uppgiften bedöms i två nivåer enligt nedan.
+    </p>
+    
+    <p style="margin-bottom: 4px; font-weight: bold;">Godkänd</p>
+    <ul class="compact">
+      <li class="compact">- Koden är inlämnad inom utsatt tid.</li>
+      <li class="compact">- Koden löser med visst tolkningsutrymme samtliga delar i uppgiftsbeskrivningen.</li>
+      <li class="compact">- Studenten har dokumenterat och/eller presenterat sina lösningar genom kommentarer i koden eller muntlig genomgång.</li>
+    </ul>
+    <p style="margin-bottom: 4px; font-weight: bold;">Underkänd</p>
+    <ul class="compact">
+      <li class="compact">- Ett eller flera av kriterierna för godkänd bedömning är inte uppfyllda.</li>
+    </ul>
+    
+    <h2>Deluppgift 1</h2>
+
+    <p class="preamble">
+      Denna deluppgift låter dig utforska grunderna i grafikprogrammering och bekanta dig med grafikprogrammeringsgränssnitt som WebGL/OpenGL. Du ska få en bättre bild av hur geometri specificeras och förbereds för en GPU genom att skapa geometriobjekt från grunden och prova hur genomskinlighet med tekniken <i>alpha blending</i> fungerar i praktiken. Du kommer också att börja se konkreta skillnader mellan scenens och objektens koordinatsystem och hur de används i grafikprogrammering.
+    </p>
+
+    <p>
+      Ladda hem arkivet som behövs för uppgiften <a href="https://scio.his.se/access/content/group/IT101G-20172-01/Programmeringsuppgift/Programmeringsuppgift.zip">här</a> och packa upp filerna i arkivet. Prova sedan att köra igång startkoden för denna deluppgift via att öppna webbsidan <span class="filename">deluppgift1.html</span> i webbläsaren. Du ska nu se ett mestadels svart renderingsfönster med en blå roterande kvadrat i mitten. Du kan trycka på tangenten <span class="key">p</span> för att stoppa alternativt starta rotationen på kameran. Startkoden finns i filen <span class="filename">deluppgift1.js</span> och det är i denna fil du gör dina ändringar för att genomföra deluppgiften.
+    </p>
+
+    <p>
+      Startkoden ritar en statisk kvadrat nära scenens origo och roterar kameran kring scenens origo. Börja med att ändra kvadratens form till en rektangel och byt färg på rektangeln till en annan valfri färg. Rektangeln ska ha en enhetlig färg över hela ytan.
+    </p>
+
+    <p>
+      Nu ska du skapa ett nytt objekt som ritas i scenen genom att specificera geometri via listor. Du ska använda en ren triangellista i objektet och rita ut detta med hjälp av funktionen <span class="function">drawArrays</span>. Objektet ska likna ett hus i sin enklaste form och bestå av endast trianglar, sexton stycket till antalet. Specificera objektet med en lista av trianglar som beskriver varje triangelhörns position och färg. Sätt samma färg på alla hörn tills vidare och alfavärdet till 1 (opak färg). I exemplet nedan visas hur husobjektets form ungefärligen förväntas vara. Tips: Använd kamerans rotation med start och stopp för att kontrollera att ditt objekts geometri ser ut att stämma. Lägg till en triangel i taget och skapa objektet kring scenens origo. Skissa gärna på papper innan du skriver in värden i koden.
+    </p>
+    
+    <div class="example"><canvas class="example" width="400" height="250"></canvas><button class="example" onclick="play(this, 0)">Visa exempel</button></div>
+    
+    <p>
+      Lägg till en tangentbordsfunktion eller webbsidekontroll som låter dig aktivera och deaktivera gallring av baksidor (<span class="english">backface culling</span>). Med hjälp av denna funktion kan du nu se efter så att trianglarna i ditt objekt är rättvända d.v.s. gallras på rätt sida av kameran. Vänd rätt de trianglar som är felvända så att objektet ritas korrekt med baksidegallring aktiverad. Lägg också til en tangentbordsfunktion eller webbsidekontroll som låter dig aktivera och deaktivera användning av djupbuffert (z-buffert).
+    </p>
+
+    <p>
+      När objektets geometri ritas ut korrekt ska du färglägga trianglarna så att inga kanter delar färg. När hörnfärgerna är satta ska objektet transleras från origo med hjälp av en transformation och sedan rotera kring z-axeln på stället med hjälp av en ytterligare transformation. Nedan finns ett exempel på ett rätt färgat objekt med rätt transformationer applicerade. Rektangeln i scenen ska inte påverkas av husobjektets transformationer.
+    </p>
+    
+    <div class="example"><canvas class="example" width="400" height="250"></canvas><button class="example" onclick="play(this, 1)">Visa exempel</button></div>
+
+    <p>
+      Nu ska du skapa ett likadant husobjekt med skillnaden att geometrin ska specificeras med en hörnlista ihop en indexlista för användning med funktionen <span class="function">drawElements</span>. Hörnlistan ska då innehålla endast de tolv unika hörnen och indexlistan beskriver sedan trianglar som ska ritas. Använd samma färger på hörnen som i det första objektet. När objektets geometri är korrekt ska detta transformeras på samma sätt som föregående objekt med skillnaden att translationen är spegelvänd. Ett exempel på hur scenen kan se ut med de båda objekten finns nedan.
+    </p>
+    
+    <div class="example"><canvas class="example" width="400" height="250"></canvas><button class="example" onclick="play(this, 2)">Visa exempel</button></div>
+
+    <p>
+      Lägg nu in två plan i scenen som är placerade på var sin sida om husobjekten och som har olika färg. Planobjekten ska ritas ut med hjälp av fyra trianglar var (sex hörn) och ska föreställa färgade glasskivor. Objekten ska vara synliga från båda håll vilket gör att du behöver dekativera baksidegallring för utritningen av dessa objekt men inte för övriga objekt i scenen. För att uppnå genomskinlighet i utritningen behöver du aktivera tekniken <i>alpha blending</i> med varianten <span class="english">over</span> och ange rätt alfavärden i trianglarnas hörn. Genom att ange olika alfavärden i objektens hörn kan du få en genomskinlighet som varierar över ytan. Ett exempel på hur glasskiveobjekten ungefärligen ska renderas finns nedan.
+    </p>
+    
+    <div class="example"><canvas class="example" width="400" height="250"></canvas><button class="example" onclick="play(this, 3)">Visa exempel</button></div>
+    
+    <p>
+      Lägg till en tangentbordsfunktion eller webbsidekontroll som låter dig byta mellan varianterna <i>over</i> och <i>add</i> i genomskinlighetsberäkningen. När kameran roterar kan du se skillnaden i utseende mellan varianterna i relation till andra objekt i scenen, både opaka och genomskinliga.
+    </p>
+
+    <p>
+      När kameran roterar ritas det ena planobjektet inte ut vid vissa tillfällen, detta beror på att djupbufferten (z-bufferten) används vid utritningen. Om det planobjekt som är närmast kameran ritas ut först kommer det andra objektet inte att ritas alls. För att lösa detta problem behöver du se till att alltid rita de två glasskiveobjekten i rätt ordning d.v.s. det som objekt som befinner sig längst bort från kameran ska ritas först. Tips: Eftersom glasskiveobjekten är statiska i scenen kan du utgå från exempelvis ett mitthörn och beräkna avståndet till kamerans position från detta hörn.
+    </p>
+
+    <h2>Deluppgift 2</h2>
+
+    <p class="preamble">
+      Denna deluppgift utmanar dig att använda tranformationer på sätt som är typiska för grafikprogrammering. Du ska också se hur texturmappning och belysning förbereds för en GPU genom att använda texturer och styra belysningsparametrar. Ett litet spår i deluppgiften handlar om att upptäcka hur genomskinliga objekt samspelar med icke-genomskinliga objekt i en scen.
+    </p>
+
+    <p>
+      Prova att köra igång startkoden för denna deluppgift via att öppna webbsidan <span class="filename">deluppgift2.html</span> i webbläsaren. Det du ska se är ett renderingsfönster som innehåller ett solobjekt med ljusstrålar och ett planetobjekt vid sidan av solen. Du kan trycka på piltangenterna (upp och ned) för att flytta kameran och du kan också klicka och dra musen i fönstret för att rotera kameran. Startkoden finns i filen <span class="filename">deluppgift2.js</span> och visar bland annat hur objekt kan skapas via hjälpfunktioner, hur texturer laddas in och används och hur en enkel matrisstack kan användas.
+    </p>
+
+    <p>
+      Börja med att byta ut texturen på solobjektet till en som passar bättre. Texturer som fungerar bra att använda för denna deluppgift finns att hämta på sidan <a target="_blank" href="http://www.solarsystemscope.com/textures/"><span class="english">Solar System Scope</span></a> och i andra hand på sidan <a target="_blank" href="http://www.celestiamotherlode.net/catalog/solarsystem.php"><span class="english">Celestia Motherlode</span></a>. Du kan även leta upp och använda texturer från andra källor men tänk då på att höjd och bredd på texturerna ska vara tvåpotenser. Texturer som används på sfärer ska helst vara anpassade för sfärisk mappning.
+    </p>
+
+    <p>
+      Du ska nu skapa ett litet planetsystem genom att rita texturmappade planetobjekt som roterar kring solen d.v.s. kring scenens y-axel och med olika avstånd till scenens origo. För ditt planetsystem finns det några generella krav: Planetsystemet ska baseras på transformationshiearki med hjälp av en matrisstack. Din lösning får inte använda cosinus- och sinusfunktioner för att flytta objekt i en cirkulär bana, alla cirkulära banor ska baseras på rotationstransformationer. Alla planeter ska ha en egenrotation kring y-axeln och ska texturmappas med unika texturer. Månar behöver inte ha en egenrotation och på månarna kan valfria texturer användas.
+    </p>
+
+    <p>
+      Ditt planetsystem ska som minst innehålla de planeter som är listade nedan i avståndsordning från solen. Nedanför listan finns ett exempel som visar hur planeterna kan se ut i planetsystemet.
+    </p>
+    
+    <ul>
+      <li>En planet (venus). Utgå från planetobjektet som finns med i scenen från början.</li>
+      <li>En planet med atmosfär och måne (jorden). Atmosfären skapas med en genomskinlig sfär som har en passande textur och som roterar i motsatt riktning mot planetens egenrotation. Månen roterar på valfritt sätt kring planeten.</li>
+      <li>En mindre planet med två månar (mars). Månarna roterar i planet y=0 kring planeten med olika avstånd och hastigheter.</li>
+      <li>En större planet med tre månar (jupiter). Månarna roterar kring var sin axel kring planeten.</li>
+      <li>En större lutande och äggformad planet med ett lutande ringsystem (saturnus). Äggformen skapas genom att skala planeten i y-led, ringsystemet skapas genom en disk som ritas dubbelsidigt och som är placerad rakt genom planeten. Det kan vara svårt att använda en textur som är ämnad för ringsystemet, använd då en annan textur som passar istället.</li>
+    </ul>
+
+    <div class="example_wide"><canvas class="example" width="700" height="250"></canvas><button class="example_wide" onclick="play(this, 4)">Visa exempel</button></div>
+    <p class="subtitle">Texturerna som används är skapade av <a target="_blank" href="http://www.solarsystemscope.com/"><span class="english">Team Scope</span></a>, <a target="_blank" href="http://www.celestialmatters.org/">Runar Thorvaldsen</a> och Hermes</p>
+
+    <p>
+      Lägg nu till tangentbordsfunktioner eller webbsidekontroller som låter dig ändra diffus- och ambiensnivåerna hos belysningen. Diffusnivån sätts via ljuskällans intensitet och ambiensnivån sätts via en ambiensfärg. För ambiensnivån kan du antingen välja att ändra valfria färgkomponenter eller att ändra alla färgkomponenter till samma värd på samma gång, den sistnämnda varianten ger en vanlig intensitetskontroll utan färginslag.
+    </p>
+
+    <h2>Deluppgift 3</h2>
+
+    <p class="preamble">
+      Denna deluppgift låter dig utforska aspekter hos en virtuell kamera och hur denna styrs på ett grundläggande sätt. Genom att implementera fyra kameravyer blir relationen mellan scenen och kamerans position/tittpunkt tydligare och du ser samtidigt nyttan med att använda separata koordinatsystem för kameran och scenen.
+    </p>
+
+    <p>
+      Prova att köra igång startkoden för denna deluppgift via att öppna webbsidan <span class="filename">deluppgift3.html</span> i webbläsaren. Det som syns i renderingsfönstret är en scen beståendes av några objekt. Startkoden finns i filen <span class="filename">deluppgift3.js</span>.
+    </p>
+    
+    <p>
+      Du ska nu lägga in tangentbords- och musfunktioner i koden som låter dig styra kameran på de sätt som listats nedan. Som stöd för att styra kameran finns det hjälpfunktioner att tillgå i filen <span class="filename">js/camera.js</span>.
+    </p>
+
+    <ul>
+      <li>Kamerans rotation kring x- och y-axlarna; styrs genom att hålla med vänster musknapp och flytta muspekaren i renderingsfönstret.</li>
+      <li>Kamerans rotation kring z-axeln; styrs genom att hålla ned höger musknapp och flytta muspekaren i x-led i renderingsfönstret.</li>
+      <li>Kamerans position i x- och z-led; styrs med hjälp av piltangenterna eller tangenterna <span class="key">w</span>,<span class="key">a</span>,<span class="key">s</span>,<span class="key">d</span>. Utgångsläget är att kameran transleras relativt vyrymden (<span class="english">"strafing"</span>) men om shift-tangenten hålls ned transleras kameran relativt världsrymden istället.</li>
+    </ul>
+
+    <p>
+      När kamerastyrningen fungerar ska du lägga till fler objekt som ritas i scenen. Objektens utformning är valfri men de ska tillsammans skapa assymetri mellan scenens axlar. Skapa sedan tre statiska kameravyer som renderar scenen utmed respektive axel i världsrymden, ihop med den rörliga kameran ska fyra vyer renderas samtidigt. Vyerna renderas till var sin del av renderingfönstret och detta sker via funktionaliteten för visningsområde (<span class="english">viewport</span>). Nedan finns ett exempel som visar hur de fyra kameravyerna är tänkta att fungera. Tips: För varje kameravy behöver scenens objekt ritas med en ny kamera och för de statiska vyerna kan du kan använda funktionen <span class="function">lookAt</span> som i tidigare deluppgifter. Tänk på att du normalt sett inte kan sätta upp en kamera som är riktad parallelt med uppvektorn, justera tittpunkten eller uppvektorn för att lösa detta specialfall.
+    </p>
+    
+    <div class="example"><canvas class="example" width="400" height="250"></canvas><button class="example" onclick="play(this, 5)">Visa exempel</button></div>
+    
+    <p>
+      Lägg in en tangentbordsfunktion eller webbsidekontroll som låter dig byta mellan att bara se den rörliga kameran och att se alla fyra vyer. Lägg också in en tangentbordsfunktion eller webbsidekontroll som låter dig styra ljuskällans position, antingen är ljuskällan placerad på en statisk position i scenen eller så placeras ljuskällan i kamerans position (följer kameran). När ljuskällan är placerad i kamerans position ska den vita sfären som representerar ljuskällan inte ritas. Till sist ska den rörliga kamerans position visualiseras i de tre statiska kameravyerna med en sfär.
+    </p>
+
+    <p style="margin-top: 26px; margin-bottom: 46px;">
+      Nu är du klar med alla tre deluppgifter och därmed hela programmeringsuppgiften! <img src="./Datorgrafik - Programmeringsuppgift_files/thumbsup.png" style="vertical-align: bottom; width: 22px; height 22px;">
+    </p>
+
+  
+
+</body></html>

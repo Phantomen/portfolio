@@ -1,0 +1,16 @@
+{
+  "source": "Unity",
+  "applications": [
+    {
+      "app_key": "application.generated.unity.examensarbetet.exe",
+      "launch_type": "url",
+      "url": "steam://launch/",
+      "action_manifest_path": "C:\\Users\\robin\\Documents\\Skola\\Examensarbete\\Unityprojektet\\Examensarbetet\\Assets\\StreamingAssets\\SteamVR\\actions.json",
+      "strings": {
+        "en_us": {
+          "name": "Examensarbetet [Testing]"
+        }
+      }
+    }
+  ]
+}

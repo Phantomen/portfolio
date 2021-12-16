@@ -14,6 +14,11 @@ I'm a programmer who went to the Univerity of Skövde to study game programming 
 - GLSL
 - Java
 - C
+  
+  
+## VR (Unity)
+<img src="VR_Videos/Bow/bow_gif.gif"/>  
+<img src="VR_Videos/Realistic_rifle/rifle_gif.gif"/>
 
 
 ## Previous game projects
@@ -35,13 +40,16 @@ Links: [Game awards](https://www.gameawards.se/Games/2019/Galactic-Dance-Off)
 <img src="https://img.itch.zone/aW1nLzI2MTQyOTEucG5n/original/jUJsIx.png"/>
 <img src="https://img.itch.zone/aW1hZ2UvNTA0NjQ4LzI2MTQyMTkucG5n/original/fSlFHN.png"/>
 
-<img src="https://img.itch.zone/aW1nLzI2MTQzMTYuZ2lm/original/5eQtog.gif"/> <img src="https://img.itch.zone/aW1nLzI2MTQzMTQuZ2lm/original/o8qPB0.gif"/> <img src="https://img.itch.zone/aW1nLzI2MTQzMTcuZ2lm/original/l8FMEW.gif"/>
-
-
+<img src="https://img.itch.zone/aW1nLzI2MTQzMTYuZ2lm/original/5eQtog.gif"/> <img src="https://img.itch.zone/aW1nLzI2MTQzMTQuZ2lm/original/o8qPB0.gif"/> <img src="https://img.itch.zone/aW1nLzI2MTQzMTcuZ2lm/original/l8FMEW.gif"/>  
+  
+  
 
 
 ## Coding examples:  
 [Bow VR (C#)](Scripts/Bow.cs)  
 [Realistic gun VR (C#)](Scripts/GunRealistic.cs)  
 [Invader game (C++)](Scripts/Invaders)  
-[School work during Skövde University](SchoolWork)
+  
+## Other links:  
+[Scripts](Scripts)  
+[School work during Skövde University](SchoolWork_Projects)

@@ -13,12 +13,8 @@ I'm a programmer who went to the Univerity of Skövde to study game programming 
 - Assembly
 - GLSL
 - Java
-- C
-  
-  
-## VR (Unity)
-<img src="VR_Videos/Bow/bow_gif.gif"/>  
-<img src="VR_Videos/Realistic_rifle/rifle_gif.gif"/>
+- C  
+
 
 
 ## Previous game projects
@@ -41,6 +37,23 @@ Links: [Game awards](https://www.gameawards.se/Games/2019/Galactic-Dance-Off)
 <img src="https://img.itch.zone/aW1hZ2UvNTA0NjQ4LzI2MTQyMTkucG5n/original/fSlFHN.png"/>
 
 <img src="https://img.itch.zone/aW1nLzI2MTQzMTYuZ2lm/original/5eQtog.gif"/> <img src="https://img.itch.zone/aW1nLzI2MTQzMTQuZ2lm/original/o8qPB0.gif"/> <img src="https://img.itch.zone/aW1nLzI2MTQzMTcuZ2lm/original/l8FMEW.gif"/>  
+  
+  
+## VR  
+I have previously worked with VR in Unity by myself.  
+My master thesis was also about how the different movement systems in VR affected the symptoms of Cybersickness in the user. Where cybersickness is the term used for motion sickness when using VR.  
+### Bow  
+The bow string can be pulled back only if the hand not holding the bow is either empty or holding an arrow.  
+The bow can either shoot the arrow by either pressing the trigger button or letting go of the arrow when it is pulled back.  
+The speed of the arrow is dependant on how far back the arrow is pulled.  
+The arrow can also be unhooked from the string if the arrow is not pulled back far enough and the trigger button is pressed.  
+<img src="VR_Videos/Bow/bow_gif.gif"/>  
+
+### Realistic Rifle  
+The rifle can be aimed with two hands.  
+The rifle has a charging handle that you can use to put one bullet from the magazine into the chamber, or remove/replace the bullet if there is a bullet already in the chamber. The rifle also can't be fired unless there is a bullet in the chamber. Meaning that even if the magazine is full but there is no bullet chambered, it will not start fiering.  
+The magazines can be released from the gun as well as reinserted and the induvidual magazines keep track of how much bullets they still have inside of them.  
+<img src="VR_Videos/Realistic_rifle/rifle_gif.gif"/>
   
   
 

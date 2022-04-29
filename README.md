@@ -1,5 +1,5 @@
 # About me
-Hello, I'm Robin Sollfors, I'm a 23 year old from sweden and I studied game development and programming in Skövde University and this is my portfolio  
+Hello, I'm Robin Sollfors, I'm a 24 year old from sweden and I studied game development and programming in Skövde University and this is my portfolio  
 <img src="Pictures/242050260_5125148737501565_1959772953239072652_n.jpg"/>  
 I'm a programmer who went to the Univerity of Skövde to study game programming for three years.  
 
